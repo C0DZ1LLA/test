@@ -3,41 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>ATHOS MOTORS | Platform</title>
-    <style>
-      body, html {
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-      }
-
-      #unity-canvas {
-          display: block;
-          width: 100vw;
-          height: 100vh;
-          background: #1F7180;
-      }
-
-      #rotate-message {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: #1F7180;
-          color: #ffffff;
-          font-size: 24px;
-          text-align: center;
-          line-height: 100vh;
-      }
-  </style>
+    <title>Unity WebGL Player | SAMAN</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width="100%" height="100%" tabindex="-1" style="width: 100vw; height: 100vh; background: #1F7180"></canvas>
+    <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #000000"></canvas>
     <script src="Build/ATHOSWEBGL.loader.js"></script>
-            <!-- Google tag (gtag.js) -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZF0NELVK00"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -55,9 +25,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/ATHOSWEBGL.data",
-        frameworkUrl: "Build/ATHOSWEBGL.framework.js",
-        codeUrl: "Build/ATHOSWEBGL.wasm",
+        dataUrl: "Build/ATHOSWEBGL.data.br",
+        frameworkUrl: "Build/ATHOSWEBGL.framework.js.br",
+        codeUrl: "Build/ATHOSWEBGL.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "C0DZ1LLA",
         productName: "SAMAN",
