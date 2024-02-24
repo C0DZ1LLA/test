@@ -23,6 +23,8 @@ body {
     display: flex; /* Use flexbox */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
+    font-family: 'Roboto', sans-serif;
+    color: #fff; /* Lighter text color for better contrast */
 }
 
 @keyframes fadeIn {
@@ -65,12 +67,12 @@ h2 {
 }
 
 @keyframes colorChange {
-    0% { color: #00ffe1; }
-    20% { color: #00ff1a; }
-    40% { color: #ff9100; }
-    60% { color: #ffee00; }
-    80% { color: #2b00ff; }
-    100% { color: #00fbff; }
+    0% { color: #ffffff; }
+    20% { color: #ffcc00; }
+    40% { color: #ffffff; }
+    60% { color: #ffcc00; }
+    80% { color: #ffffff; }
+    100% { color: #ffcc00; }
 }
 
 label {

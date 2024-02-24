@@ -10,13 +10,10 @@
     
     <div id="container">
         <h1>Reusable Inventory Management System</h1>
-    
-        <h2 id="container">Made by SAMAN</h2>
-        
         <div id="container">
         <div id="product-item button">
-        <button id="add-btn" onclick="exportAllProducts()">Export All Products</button>
-            <button onclick="clearDataAndRefresh()">Clear Data and Refresh</button>
+        <button id="container" onclick="exportAllProducts()">Export All Products</button>
+            <button id="container" onclick="clearDataAndRefresh()">Clear Data and Refresh</button>
         </div>
 
         <label for="category-selector">Select ITEMS:</label>
@@ -25,9 +22,13 @@
         </select>
         <div id="product-container"></div>
     </div>
+    <h2 id="container">Made by SAMAN</h2>
+    <button id="container" onclick="openEmailClient()">Direct Email</button>
+    <button id="container" onclick="openPhoneApp()">Direct message</button>
+    <button id="container" onclick="openURL2()">Website</button>
+    <button id="container" onclick="openURL1()">Contact Social</button>
 
     <script>
-
 
 
 
@@ -1861,6 +1862,29 @@ let products = JSON.parse(localStorage.getItem('products')) || [
     category: "Powder" 
 }
 ];
+
+
+function openEmailClient() {
+            // Replace 'email@example.com' with the desired email address
+            window.location.href = 'saman.abotaleby@gmail.com';
+        }
+
+        function openPhoneApp() {
+            // Replace '1234567890' with the desired phone number
+            window.location.href = '+357 97906864';
+        }
+
+        function openURL1() {
+            // Replace 'https://example.com' with the desired URL
+            window.open('https://twitter.com/saman_abotaleby', '');
+        }
+
+        function openURL2() {
+            // Replace 'https://example.com' with the desired URL
+            window.open('https://samanconnect.com', '');
+        }
+
+
         // Function to retrieve products from localStorage
         function getProductsFromLocalStorage() {
             const storedProducts = localStorage.getItem('products');
