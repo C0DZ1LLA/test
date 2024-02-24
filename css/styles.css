@@ -12,7 +12,7 @@ body {
     color: #fff; /* Lighter text color for better contrast */
 }
 
-#container {
+.container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -23,8 +23,6 @@ body {
     display: flex; /* Use flexbox */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
-    font-family: 'Roboto', sans-serif;
-    color: #fff; /* Lighter text color for better contrast */
 }
 
 @keyframes fadeIn {
@@ -32,76 +30,51 @@ body {
     100% { opacity: 1; }
 }
 
-h1, h2 {
+h1 {
     font-size: 3em; /* Larger font size for the heading */
     color: #ffcc00; /* Bright accent color for the heading */
-    margin-bottom: 40px; /* Increased spacing below the heading */
+    margin-bottom: 20px; /* Increased spacing below the heading */
     text-align: center; /* Center alignment for the heading */
-    animation: pulse 2s infinite; /* Pulse animation for headings */
+    animation: neonGlow 1.5s infinite alternate; /* Neon glow effect for the heading */
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-h1 {
-    animation: slideInDown 1s ease, colorChange 2s infinite alternate; /* Slide-in animation and color change for the heading */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #ffcc00, 0 0 60px #ffcc00, 0 0 70px #ffcc00;
+    }
+    100% {
+        text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00, 0 0 20px #ffcc00, 0 0 25px #ffcc00, 0 0 30px #ffcc00, 0 0 35px #ffcc00;
+    }
 }
 
 h2 {
-    animation: slideInUp 1s ease; /* Slide-in animation for the product container */
-    animation: slideInDown 1s ease, colorChange 2s infinite alternate; /* Slide-in animation and color change for the heading */
+    font-size: 2em; /* Larger font size for the heading */
+    color: #ffcc00; /* Bright accent color for the heading */
+    margin-bottom: 10px; /* Increased spacing below the heading */
+    text-align: center; /* Center alignment for the heading */
 }
 
-@keyframes slideInDown {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+p {
+    font-size: 1.2em; /* Larger font size for paragraphs */
+    margin-bottom: 20px; /* Increased spacing below paragraphs */
+    text-align: center; /* Center alignment for paragraphs */
 }
 
-@keyframes colorChange {
-    0% { color: #ffffff; }
-    20% { color: #ffcc00; }
-    40% { color: #ffffff; }
-    60% { color: #ffcc00; }
-    80% { color: #ffffff; }
-    100% { color: #ffcc00; }
+.slogan {
+    font-size: 1.5em; /* Larger font size for the slogan */
+    margin-bottom: 20px; /* Increased spacing below the slogan */
+    text-align: center; /* Center alignment for the slogan */
+    animation: fadeIn 1s ease; /* Fade-in animation for the slogan */
 }
 
-label {
-    font-size: 1.2em; /* Slightly larger font size for labels */
-    color: #aaa; /* Lighter label color for better contrast */
-    margin-bottom: 20px; /* Increased spacing below labels */
-    display: block; /* Block-level display for labels */
-    animation: fadeIn 1s ease; /* Fade-in animation for labels */
+.website-details {
+    font-size: 1.2em; /* Larger font size for website details */
+    margin-bottom: 20px; /* Increased spacing below website details */
+    text-align: center; /* Center alignment for website details */
+    animation: fadeIn 1s ease; /* Fade-in animation for website details */
 }
 
-#category-selector {
-    width: 100%; /* Full width for the select element */
-    padding: 15px; /* Increased padding for better touch support */
-    border: none; /* Remove border for a cleaner look */
-    border-radius: 10px; /* Rounded corners for the select element */
-    background-color: #333; /* Darker background color for the select element */
-    color: #fff; /* Lighter text color for better readability */
-    font-size: 1.2em; /* Slightly larger font size for consistency */
-}
-
-#product-container {
-    margin-top: 60px; /* Increased spacing above the product container */
-    display: flex; /* Use flexbox */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items horizontally */
-    animation: slideInUp 1s ease; /* Slide-in animation for the product container */
-}
-
-.product-item {
+.car {
     margin: 0 20px 40px 20px; /* Adjust margins for spacing */
     padding: 30px;
     background-color: #444; /* Dark background color for product items */
@@ -111,31 +84,12 @@ label {
     animation: fadeIn 1s ease; /* Fade-in animation for product items */
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.product-item:hover {
-    transform: translateY(-5px); /* Move product items up on hover for a futuristic animation */
+.car:hover {
+    transform: translateY(-5px) rotate(2deg); /* Move product items up and rotate slightly on hover for a futuristic animation */
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.3); /* Enhanced box shadow on hover */
 }
 
-.product-item h3 {
-    color: #ffcc00; /* Bright accent color for headings */
-    font-size: 1.8em; /* Larger font size for headings */
-    margin-bottom: 30px; /* Increased spacing below headings */
-    text-align: center; /* Center alignment for headings */
-}
-
-.product-item p {
-    color: #c5c5c5; /* Lighter text color for product details */
-    margin-bottom: 15px; /* Increased spacing below paragraphs */
-    text-align: center; /* Center alignment for paragraphs */
-}
-
-.product-item input[type="number"],
-.product-item button {
+.button-container a {
     width: calc(50% - 10px);
     padding: 15px;
     border: none;
@@ -148,19 +102,68 @@ label {
     animation: pulse 2s infinite; /* Pulse animation for buttons */
 }
 
-.product-item button:hover {
+.button-container a:hover {
     background-color: #ffa500; /* Darker hover color for buttons */
     transform: scale(1.05); /* Scale button on hover */
 }
 
-.product-item input[type="number"] {
-    width: calc(100% - 20px);
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+/* CSS styles */
+.car {
+    display: flex;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.product-item button {
+.car-content {
+    display: flex;
     width: 100%;
 }
 
-.product-item button:hover {
-    background-color: #ffa500; /* Darker hover color for buttons */
+.car-images {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.car-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.car-details {
+    flex: 2;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.car-info {
+    margin-bottom: 5px;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+.car-button {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.car-button:hover {
+    background-color: #0056b3;
 }
